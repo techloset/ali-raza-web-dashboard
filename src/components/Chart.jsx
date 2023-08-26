@@ -29,14 +29,10 @@ function Chart() {
     ],
     datasets: [
       {
-        label: "Ali",
         data: [40, 40, 62, 40, 58, 56, 82, 45, 50, 68, 62, 47, 61, 52, 60],
         borderColor: "blue",
-        fill: "+1",
         pointBorderColor: "transparent",
         backgroundColor: "Blue",
-        fill: "+1",
-        fill: true,
       },
     ],
   };
