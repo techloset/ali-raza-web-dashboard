@@ -10,7 +10,7 @@ export default function Layout() {
 
       <div className="flex-1 ">
         <Header />
-        <div className="p-4">{<Outlet />}</div>
+        <div className="pt-4">{<Outlet />}</div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const countryStyle =
 
 export default function Countries() {
   return (
-    <div className="sm:w-full lg:w-[17.938rem] lg:h-[20.375rem] bg-white p-4 border border-blue-300 rounded-3xl shadow-2xl">
+    <div className="sm:w-full lg:w-[17.938rem] lg:h-[20.375rem] bg-white p-4  rounded-3xl shadow-2xl">
       <div className="text-[1.4rem] font-sans font-bold  ml-3 mt-3 ">
         Top Countries
       </div>

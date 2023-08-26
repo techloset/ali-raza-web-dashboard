@@ -5,8 +5,7 @@ import Tiktok from "../assets/tiktok.svg";
 
 export default function CompaignPerformance() {
   return (
-    // <div className=" grid lg:flex">
-    <div className="bg-white mt-[1.5rem] ml-[1rem] rounded-3xl lg:h-[20.375rem] lg:w-[47.438rem]  border border-blue-300 shadow-2xl sm:w-full">
+    <div className="bg-white sm:w-full sm:h-[20rem] flex flex-col  lg:h-[20.375rem] lg:w-[47.438rem] mt-[1.5rem]   shadow-2xl rounded-3xl ">
       <div className="text-[1.4rem] m-5 mt-7 font-bold flex justify-between">
         Compaign Performance
         <button class="text-blue-900  bg-neutral-200  focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm px-4 py-2.5  text-center inline-flex items-center ">
@@ -14,7 +13,7 @@ export default function CompaignPerformance() {
         </button>
       </div>
 
-      <div className=" text-black flex justify-between ml-[2%] mr-[2%] font-bold  ">
+      <div className=" text-black flex justify-between px-[2%] pr-[2%] font-bold  ">
         <div className="space-y-2.5 text-center ">
           <p className="text-neutral-400 text-left mb-5 ">Compaign</p>
           <span className="flex ">
@@ -64,6 +63,5 @@ export default function CompaignPerformance() {
         </div>
       </div>
     </div>
-    // </div>
   );
 }

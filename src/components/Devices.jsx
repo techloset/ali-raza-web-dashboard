@@ -2,14 +2,13 @@ import React from "react";
 import Mobile from "../assets/Mobile.svg";
 import Desktop from "../assets/Desktop.svg";
 import Tablet from "../assets/Tablet.svg";
-
 const textStyle = " text-blue-900 text-[1.125rem] font-bold ";
 const imageStyle = " px-2 w-[3.7rem] ";
 
 export default function Devices() {
   return (
-    <div className=" sm:w-full  lg:w-[17.938rem] lg:h-[20.375rem] bg-white font-bold  p-5 border border-blue-300 rounded-3xl shadow-2xl">
-      <span className="text-[1.4rem] px-3">Device Catagory</span>
+    <div className=" sm:w-full  lg:w-[17.5rem] lg:h-[20.375rem] bg-white font-bold  p-5  rounded-3xl shadow-2xl">
+      <span className="text-[1.4rem] px-3">Device Category</span>
 
       {/* Inner div STYLES */}
       <div className="lg:grid lg:space-y-5 flex  mt-10  ">

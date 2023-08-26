@@ -29,10 +29,14 @@ function Chart() {
     ],
     datasets: [
       {
+        label: "Ali",
         data: [40, 40, 62, 40, 58, 56, 82, 45, 50, 68, 62, 47, 61, 52, 60],
         borderColor: "blue",
+        fill: "+1",
         pointBorderColor: "transparent",
-        backgroundGradientFrom: "Blue",
+        backgroundColor: "Blue",
+        fill: "+1",
+        fill: true,
       },
     ],
   };
@@ -58,8 +62,8 @@ function Chart() {
     },
   };
   return (
-    <div className="sm:w-full sm:h-[25rem] flex flex-col  lg:h-[20.835rem] lg:w-[47.78rem]  ml-[1rem] mt-[1.5rem] bg-white rounded-3xl border border-gray-200 shadow-2xl">
-      <div className="font-bold text-2xl   m-[2rem] flex  justify-between">
+    <div className="bg-white sm:w-full sm:h-[25rem] flex flex-col  lg:h-[20.835rem] lg:w-[47.78rem] mt-[1.5rem]  rounded-3xl border border-gray-200 shadow-2xl">
+      <div className="font-bold text-[1.4rem]   m-[2rem] flex  justify-between">
         <p>Sales Funnel</p>
         <button class="text-blue-900  bg-neutral-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm  px-4 py-2.5 text-center inline-flex items-center ">
           This Month

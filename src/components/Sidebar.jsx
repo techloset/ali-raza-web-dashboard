@@ -4,7 +4,6 @@ import DbSvg from "../assets/DbSVG.svg";
 import AudienceSvg from "../assets/AudienceSVG.svg";
 import CompaignSvg from "../assets/CompaignSVG.svg";
 import PromoteSvg from "../assets/PromoteSVG.svg";
-// import Profile from "../assets/ProfileSVG.svg";
 import Profile from "../assets/Profile.svg";
 import PerformanceSVG from "../assets/PerformanceSVG.svg";
 import SettingSvg from "../assets/SettingSVG.svg";
@@ -23,8 +22,8 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="flex flex-col text-lg ">
-      <div className="flex items-center gap-2 mt-[2.5rem] ml-[3.188rem]  text-4xl">
+    <div className="flex flex-col text-[1.187rem] ">
+      <div className="flex items-center gap-2 mt-[2.5rem] px-5 text-4xl">
         {/* Hamburger menu button */}
         <button onClick={toggleSidebar} className="lg:hidden">
           <GiHamburgerMenu />
@@ -33,24 +32,22 @@ export default function Sidebar() {
         <img
           src={LogoSvg}
           alt="Company Logo "
-          className={`h-12 ${showSidebar ? "block " : ""}`}
+          className={`h-12 ${showSidebar && "block "}`}
         />
         <span
-          className={`text-blue-800 font-normal  ${
-            showSidebar ? "block " : ""
-          }`}
+          className={`text-blue-800 font-normal  ${showSidebar && "block  "}`}
         >
           Ads<span className=" font-sans font-bold">litics</span>
         </span>
       </div>
 
       <div
-        className={`lg:w-[14.438rem]  lg:mt-[3.5rem] lg:ml-[2.188rem]  ${
+        className={`lg:w-[14.438rem]  lg:mt-[3.5rem]  ${
           showSidebar ? "block " : "hidden lg:block"
         }`}
         id="navbar-default"
       >
-        <div className="lg:ml-[2rem] lg:space-y-8 text-black text-xl bg-white ">
+        <div className="lg:pl-[2rem] lg:space-y-8 text-black text-xl bg-white ">
           <span className={hover}>
             <img src={DbSvg} alt="Dashboard" className="  h-8" />
             <Link className="text-black " to={"/"}>
@@ -99,10 +96,10 @@ export default function Sidebar() {
             </Link>
           </span>
         </div>
-        <div className=" lg:mt-56 lg:ml-10 ">
+        <div className=" lg:mt-56  px-8 ">
           <span className="flex mb-0 ">
             <img src={bPic} alt="Gavano" />
-            <p className="text-black ml-2 mt-2">Gavano</p>
+            <p className="text-black pl-2 mt-2">Gavano</p>
             <p className="mx-10 mt-1">...</p>
           </span>
         </div>
