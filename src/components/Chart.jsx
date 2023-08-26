@@ -1,4 +1,5 @@
 import React from "react";
+import redline from "../assets/redline.svg";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJs,
@@ -6,9 +7,38 @@ import {
   CategoryScale,
   LinearScale,
   PointElement,
+  Filler,
 } from "chart.js";
-ChartJs.register(LineElement, CategoryScale, LinearScale, PointElement);
+
+ChartJs.register(
+  {
+    id: "ali",
+    afterDraw: function (chart, easing) {
+      if (chart.tooltip._active && chart.tooltip._active.length) {
+        const activePoint = chart.controller.tooltip._active[0];
+        const ctx = chart.ctx;
+        const x = activePoint.tooltipPosition().x;
+        const topY = chart.scales.topY;
+        const bottomY = chart.scales.bottomY;
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(x, topY);
+        ctx.lineTo(x, bottomY);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = "#e23fa9";
+        ctx.stroke();
+        ctx.restore();
+      }
+    },
+  },
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  Filler
+);
 function Chart() {
+  var ctx = document.getElementById("myChart");
   const data = {
     labels: [
       "10",
@@ -30,13 +60,24 @@ function Chart() {
     datasets: [
       {
         data: [40, 40, 62, 40, 58, 56, 82, 45, 50, 68, 62, 47, 61, 52, 60],
+        backgroundColor: "lightblue",
+
         borderColor: "blue",
         pointBorderColor: "transparent",
+        fill: true,
       },
     ],
   };
   const options = {
     maintainAspectRatio: false,
+    tooltips: {
+      mode: "x",
+      intersect: false,
+    },
+    hover: {
+      mode: "index",
+      intersect: false,
+    },
     plugins: {
       legends: false,
     },
@@ -79,7 +120,7 @@ function Chart() {
         </button>
       </div>
       <div className="flex-1 sm:w-[90%] lg:w-[43rem] lg:h-[10rem] ml-[1.5rem]">
-        <Line data={data} options={options}></Line>
+        <Line ctx data={data} options={options}></Line>
       </div>
     </div>
   );
