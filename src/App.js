@@ -10,19 +10,21 @@ import Settings from "./pages/Settings";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="compaign" element={<Compaign />} />
-          <Route path="audience" element={<Audience />} />
-          <Route path="performance" element={<Performance />} />
-          <Route path="promote" element={<Promote />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="settings" element={<Settings />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="overscroll-contain">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="compaign" element={<Compaign />} />
+            <Route path="audience" element={<Audience />} />
+            <Route path="performance" element={<Performance />} />
+            <Route path="promote" element={<Promote />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 export default App;

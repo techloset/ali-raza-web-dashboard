@@ -23,7 +23,7 @@ export default function Sidebar() {
 
   return (
     <div className="flex flex-col text-[1.187rem] ">
-      <div className="flex items-center gap-2 mt-[2.5rem] px-5 text-4xl">
+      <div className="flex items-center gap-2 mt-[2.5rem] ml-[3.188rem]  px-5 text-4xl">
         {/* Hamburger menu button */}
         <button onClick={toggleSidebar} className="lg:hidden">
           <GiHamburgerMenu />
@@ -42,12 +42,12 @@ export default function Sidebar() {
       </div>
 
       <div
-        className={`lg:w-[14.438rem]  lg:mt-[3.5rem]  ${
+        className={`lg:w-[14.438rem]  lg:mt-[3.5rem] lg:ml-[2.188rem]  ${
           showSidebar ? "block " : "hidden lg:block"
         }`}
         id="navbar-default"
       >
-        <div className="lg:pl-[2rem] lg:space-y-8 text-black text-xl bg-white ">
+        <div className="lg:ml-[2rem] lg:space-y-8 text-black text-xl bg-white ">
           <span className={hover}>
             <img src={DbSvg} alt="Dashboard" className="  h-8" />
             <Link className="text-black " to={"/"}>

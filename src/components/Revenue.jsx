@@ -4,7 +4,7 @@ import DownArrow from "../assets/DownArrow.svg";
 
 function Revenue() {
   return (
-    <div className="grid grid-rows-1 gap-4 sm:w-full lg:w-[66rem] ">
+    <div className="grid grid-rows-1 gap-4 sm:w-full lg:w-[67.625rem] ml-[1.5rem]">
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 items-center bg-white rounded-3xl p-4 shadow-xl ">
         <div className="bg-white space-y-3 pl-4 p-4 flex-1 items-center">
           <span className="flex space-x-2 text-neutral-400 text-sm  font-bold">
