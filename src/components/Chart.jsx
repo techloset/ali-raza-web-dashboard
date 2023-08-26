@@ -34,7 +34,7 @@ function Chart() {
         pointBorderColor: "transparent",
         backgroundColor: "Blue",
       },
-    ],
+    ]
   };
   const options = {
     maintainAspectRatio: false,
