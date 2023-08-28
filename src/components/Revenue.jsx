@@ -15,7 +15,7 @@ function Revenue() {
       <div className="bg-white space-y-3 pl-4 p-4 flex-1 items-center">
         <span className="flex space-x-2 text-neutral-400 text-sm  font-bold">
           Available to withdraw
-          <p className="flex items-center bg-neutral-200 border rounded-xl text-xs text-black ml-5">
+          <p className="flex items-center w-[48px] h-[21px] bg-neutral-200 border rounded-xl text-xs text-black ml-5">
             <img src={UpArrow} alt="Arrow" className="w-3" />
             10.0%
           </p>
@@ -29,7 +29,7 @@ function Revenue() {
       <div className="bg-white space-y-3 pl-4 p-4 flex-1 items-center">
         <span className="flex text-black text-base font-medium">
           Today Revenue
-          <p className="flex items-center bg-red-200 border rounded-xl text-xs  text-red-600 ml-5">
+          <p className="flex items-center  w-[48px] h-[21px] bg-red-200 border rounded-xl text-xs  text-red-600 ml-5">
             <img src={DownArrow} alt="Arrow" className="w-3" />
             3.0%
           </p>
@@ -43,7 +43,7 @@ function Revenue() {
       <div className="bg-white space-y-3 pl-4 p-4 flex-1 items-center">
         <span className="flex text-black text-base font-medium">
           Total Sessions
-          <p className="flex items-center bg-neutral-200 border rounded-xl text-xs ml-5">
+          <p className="flex items-center w-[48px] h-[21px] bg-neutral-200 border rounded-xl text-xs ml-5">
             <img src={UpArrow} alt="Arrow" className="w-3" />
             3.2%
           </p>
@@ -57,7 +57,7 @@ function Revenue() {
       <div className="bg-white space-y-3 pl-4 p-4 flex-1 items-center">
         <span className="flex text-black text-base font-medium">
           Subscribers
-          <p className="flex items-center bg-neutral-200  border rounded-xl text-xs text-blue-500 ml-5">
+          <p className="flex items-center w-[48px] h-[21px] bg-neutral-200  border rounded-xl text-xs text-blue-500 ml-5">
             <img src={UpArrow} alt="Arrow" className="w-3 " />
             8.3%
           </p>
