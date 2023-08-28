@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const hover =
-  "flex items-center space-x-4 h-12 decoration-transparent hover:scale-105 hover:bg-white active:bg-neutral-500 rounded-md ";
+  "flex items-center space-x-4 h-12 decoration-transparent hover hover:scale-105 focus: hover:bg-white active:bg-white  rounded-md";
 
 export default function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -50,47 +50,58 @@ export default function Sidebar() {
         <div className="lg:ml-[2rem] lg:space-y-8 text-black text-xl bg-white ">
           <span className={hover}>
             <img src={DbSvg} alt="Dashboard" className="  h-8" />
-            <Link className="text-black " to={"/"}>
+            <Link className="text-black hover:text-blue-700" to={"/"}>
               Dashboard
             </Link>
           </span>
           <span className={hover}>
             <img src={CompaignSvg} alt="Compaign" className=" h-8" />
-            <Link className="text-black" to={"/compaign"}>
+            <Link className="text-black hover:text-blue-700" to={"/compaign"}>
               Compaign
             </Link>
           </span>
 
           <span className={hover}>
             <img src={AudienceSvg} alt="Audience" className="h-8" />
-            <Link className="text-black" to={"/audience"}>
+            <Link className="text-black hover:text-blue-700" to={"/audience"}>
               Audience
             </Link>
           </span>
 
           <span className={hover}>
             <img src={PerformanceSVG} alt="Performance" className="h-8 " />
-            <Link className="text-black" to={"/performance"}>
+            <Link
+              className="text-black hover:text-blue-700"
+              to={"/performance"}
+            >
               Performance
             </Link>
           </span>
 
           <span className={hover}>
             <img src={PromoteSvg} alt="Promote" className="h-8" />
-            <Link className="text-black" to={"/promote"}>
+            <Link className="text-black hover:text-blue-700" to={"/promote"}>
               Promote
             </Link>
           </span>
           <hr />
           <span className={hover}>
-            <img src={Profile} alt="profile" className="h-8" />
+            <img
+              src={Profile}
+              alt="profile hover:text-blue-700"
+              className="h-8"
+            />
             <Link className="text-black" to={"/profile"}>
               Profile
             </Link>
           </span>
 
           <span className={hover}>
-            <img src={SettingSvg} alt="Settings" className="h-8" />
+            <img
+              src={SettingSvg}
+              alt="Settings hover:text-blue-700"
+              className="h-8"
+            />
             <Link className="text-black" to={"/settings"}>
               Settings
             </Link>
