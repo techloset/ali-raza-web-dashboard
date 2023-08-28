@@ -7,7 +7,7 @@ const imageStyle = " px-2 w-[3.7rem] ";
 
 export default function Devices() {
   return (
-    <div className=" sm:w-full  lg:w-[17.5rem] lg:h-[20.375rem] bg-white font-bold  p-5  rounded-3xl shadow-2xl">
+    <div className=" sm:max-w-fit  lg:w-[17.5rem] lg:h-[20.375rem] bg-white font-bold  p-5  rounded-3xl shadow-2xl">
       <span className="text-[1.4rem] px-3">Device Category</span>
 
       {/* Inner div STYLES */}

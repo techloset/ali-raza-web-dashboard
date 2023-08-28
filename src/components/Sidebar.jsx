@@ -23,7 +23,7 @@ export default function Sidebar() {
 
   return (
     <div className="flex flex-col text-[1.187rem] ">
-      <div className="flex items-center gap-2 mt-[2.5rem] ml-[3.188rem]  px-5 text-4xl w-full">
+      <div className="flex items-center gap-2 mt-[2.5rem] ml-[2.188rem]  px-5 text-4xl w-full">
         {/* Hamburger menu button */}
         <button onClick={toggleSidebar} className="lg:hidden">
           <GiHamburgerMenu />
@@ -37,7 +37,7 @@ export default function Sidebar() {
         <span
           className={`text-blue-800 font-normal  ${showSidebar && "block  "}`}
         >
-          Ads<span className=" font-sans font-bold">litics</span>
+          Ads<span className=" font-montserrat font-bold">litics</span>
         </span>
       </div>
 
@@ -96,7 +96,7 @@ export default function Sidebar() {
             </Link>
           </span>
         </div>
-        <div className=" lg:mt-56  px-8 ">
+        <div className=" lg:mt-56  px-5 ">
           <span className="flex mb-0 ">
             <img src={bPic} alt="Gavano" />
             <p className="text-black pl-2 mt-2">Gavano</p>

@@ -1,5 +1,5 @@
 import React from "react";
-import redline from "../assets/redline.svg";
+import Redline from "../assets/Redline.png";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJs,
@@ -10,33 +10,7 @@ import {
   Filler,
 } from "chart.js";
 
-ChartJs.register(
-  {
-    id: "ali",
-    afterDraw: function (chart, easing) {
-      if (chart.tooltip._active && chart.tooltip._active.length) {
-        const activePoint = chart.controller.tooltip._active[0];
-        const ctx = chart.ctx;
-        const x = activePoint.tooltipPosition().x;
-        const topY = chart.scales.topY;
-        const bottomY = chart.scales.bottomY;
-        ctx.save();
-        ctx.beginPath();
-        ctx.moveTo(x, topY);
-        ctx.lineTo(x, bottomY);
-        ctx.lineWidth = 10;
-        ctx.strokeStyle = "#e23fa9";
-        ctx.stroke();
-        ctx.restore();
-      }
-    },
-  },
-  LineElement,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  Filler
-);
+ChartJs.register(LineElement, CategoryScale, LinearScale, PointElement, Filler);
 function Chart() {
   var ctx = document.getElementById("myChart");
   const data = {
@@ -61,7 +35,6 @@ function Chart() {
       {
         data: [40, 40, 62, 40, 58, 56, 82, 45, 50, 68, 62, 47, 61, 52, 60],
         backgroundColor: "lightblue",
-
         borderColor: "blue",
         pointBorderColor: "transparent",
         fill: true,
@@ -70,14 +43,6 @@ function Chart() {
   };
   const options = {
     maintainAspectRatio: false,
-    tooltips: {
-      mode: "x",
-      intersect: false,
-    },
-    hover: {
-      mode: "index",
-      intersect: false,
-    },
     plugins: {
       legends: false,
     },
@@ -98,7 +63,7 @@ function Chart() {
     },
   };
   return (
-    <div className="bg-white sm:w-full sm:h-[25rem] flex flex-col  lg:h-[20.835rem] lg:w-[47.78rem] mt-[1.5rem] ml-[1.5rem]  rounded-3xl border border-gray-200 shadow-2xl">
+    <div className="bg-white sm:w-full sm:h-[25rem]  flex flex-col  lg:h-[20.835rem] lg:w-[47.78rem] mt-[1.5rem] lg:ml-[1.5rem]  rounded-3xl border border-gray-200 shadow-2xl">
       <div className="font-bold text-[1.4rem]   m-[2rem] flex  justify-between">
         <p>Sales Funnel</p>
         <button class="text-blue-900  bg-neutral-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm  px-4 py-2.5 text-center inline-flex items-center ">
@@ -119,7 +84,12 @@ function Chart() {
           </svg>
         </button>
       </div>
-      <div className="flex-1 sm:w-[90%] lg:w-[43rem] lg:h-[10rem] ml-[1.5rem]">
+      <div className="flex-1 relative sm:w-[90%] lg:w-[43rem] lg:h-[10rem] ml-[1.5rem]">
+        <img
+          src={Redline}
+          alt=""
+          className="absolute z-10 ml-[314px] lg:mt-[42px] mt-[62px] "
+        />
         <Line ctx data={data} options={options}></Line>
       </div>
     </div>
