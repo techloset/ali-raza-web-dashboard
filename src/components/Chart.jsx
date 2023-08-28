@@ -12,7 +12,6 @@ import {
 
 ChartJs.register(LineElement, CategoryScale, LinearScale, PointElement, Filler);
 function Chart() {
-  var ctx = document.getElementById("myChart");
   const data = {
     labels: [
       "10",
